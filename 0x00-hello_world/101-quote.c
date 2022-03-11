@@ -7,5 +7,7 @@
  */
 int main(void)
 {
-	putchar("and that piece of art is useful\" = Dora Korpar, 2015-10-19\n") 2>;
+	int fd[2];
+	dprintf(fd[2], "and that piece of art is useful\" = Dora Korpar, 2015-10-19\n");
+	return (1);
 }
