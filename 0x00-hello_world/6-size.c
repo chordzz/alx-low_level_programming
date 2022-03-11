@@ -1,8 +1,10 @@
 #include <stdio.h>
-/*
- *main - Serves as the entry point for the app
+
+/**
+ * main - entry point of program
  *
- *Description: This function is the function that gets called and it calls other needed functions. Program ends when this function returns.
+ * Description: Description: This is the main function of the app
+ * Return: zero
  */
 
 int main(void)
@@ -19,4 +21,5 @@ int main(void)
 	printf("Size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(lli));
 	printf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(f));
 
+	return (0);
 }
