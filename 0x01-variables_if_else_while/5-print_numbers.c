@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 /**
@@ -12,14 +11,9 @@ int main(void)
 {
 	char letter;
 
-	for (letter = '0'; letter <= '9'; letter++)
+	for (letter = '1'; letter <= '9'; letter++)
 	{
-		if (!(letter == 'q' || letter == 'e'))
-		{
-			putchar(letter);
-		}
-
-
+		putchar(letter);
 	}
 
 	putchar('\n');
