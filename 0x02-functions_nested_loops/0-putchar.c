@@ -3,11 +3,11 @@
 /*
  * main - entry point for the program
  *
- * Description: program to print _putchar
+ * Description: Program to print _putchar
  * Return: zero
  */
 
-int main()
+int main(void)
 {
 	char text[9] = "_putchar";
 
@@ -17,7 +17,7 @@ int main()
 	{
 		_putchar(text[i]);
 	}
-	
+
 	_putchar('\n');
 
 	return (0);
