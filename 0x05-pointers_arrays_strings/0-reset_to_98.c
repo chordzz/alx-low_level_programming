@@ -2,7 +2,7 @@ include "main.h"
 
 /**
  * reset_to_98 - resets the value of a parameter to 98
- * @*n: a pointer to the address to be reset
+ * @n: a pointer to the address to be reset
  *
  * Return: Void
  */
