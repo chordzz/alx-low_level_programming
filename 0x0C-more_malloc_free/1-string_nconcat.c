@@ -3,14 +3,14 @@
 
 /**
  * string_nconcat - concatenates two strings
- * @s1: string
- * @s2: string
- * n: integer
- * Return: pointer or NULL
+ * @s1: first string
+ * @s2: second string
+ * @n: amount of bytes
+ * Return: pointer
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i, j, count, lstr;
+	unsigned int i, j, count, lstr;
 	char *new_mem;
 
 	if (s1 == NULL)
