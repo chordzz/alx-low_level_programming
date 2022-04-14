@@ -11,18 +11,47 @@ void print_all(const char * const format, ...)
 	unsigned int i = 0, c = 0, j;
 	va_list params;
 	char *str;
+	const char arg_type[] = "cifs";
+	va_start(params, format);
 
-	va_start(params, n);
-	for (i = 0; i < n; i++)
+	while (format && format[i])
 	{
-		str = va_arg(params, char *);
-
-		if (str)
-			printf("%s", str);
-		else
-			printf("(nil)");
-		if (seperator && i < n - 1)
-			printf("%s", seperator);
+		j = 0;
+		while (arg_type[j])
+		{
+			if (format[i] == arg_type[j] && c)
+			{
+				printf(", ");
+				break;
+			}
+			j++;
+		}
+		switch (format[i])
+		{
+			case 'c':
+				printf("%c", va_arg(params, int));
+				c = 1;
+				break;
+			case 'i':
+				printf("%d", va_arg(params, int));
+				c = 1;
+				break;
+			case 'f':
+				printf("%f", va_arg(params, double));
+				c = 1;
+				break;
+			case 's':
+				str = va_arg(params, char *);
+				c = 1;
+				if (!str)
+				{
+					printf("(nil)");
+					break;
+				}
+				printf("%s", str);
+				break;
+		}
+		i++;
 	}
 	printf("\n");
 	va_end(params);
