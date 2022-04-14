@@ -6,7 +6,7 @@
  *
  * Return: sum of parameters(integer) or 0.
  */
-int sum_them_all(const unsisgned int n, ...)
+int sum_them_all(const unsigned int n, ...)
 {
 	unsigned int i;
 	int sum = 0;
@@ -17,7 +17,7 @@ int sum_them_all(const unsisgned int n, ...)
 	va_start(params, n);
 	for (i = 0; i < n; i++)
 	{
-		sum += va_start(params, int);
+		sum += va_arg(params, int);
 	}
 	va_end(params);
 	return (sum);
