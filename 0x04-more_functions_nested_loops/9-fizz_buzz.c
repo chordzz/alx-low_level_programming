@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - prints a line of _ n long
@@ -30,4 +31,5 @@ int main(void)
 		}
 		printf(" ");
 	}
+	return (0);
 }
